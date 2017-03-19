@@ -29,9 +29,6 @@
 			<?php dynamic_sidebar('footer'); ?>
 		</div>
 	</footer>
-	<script src="<?php bloginfo('template_url'); ?>/assets/js/slick.js" type="text/javascript"></script>
-
-
 </div>
 
 <?php

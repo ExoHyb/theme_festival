@@ -10,8 +10,6 @@
 	<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/slick.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/slick-theme.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body <?php body_class(); ?>>

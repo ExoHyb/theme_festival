@@ -4,7 +4,6 @@ img,
 .wp-caption { max-width: 100%; height: auto; }
 
 
-
 // Facebook placeholder
 #fb-root { display: none; }
 
@@ -56,17 +55,17 @@ img,
 
 .entry-content {
 	@include hyphens();
-	
+
 	> *:first-child {
 		margin-top: 0;
 	}
-	
+
 	.read-more { display: block; text-align: right; }
-	
+
 	table {
 		@extend .table;
 	}
-	
+
 	iframe { max-width: 100%!important; }
 
 

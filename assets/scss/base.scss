@@ -6,6 +6,19 @@
 http://github.com/redpik/Twoobl
 */
 
+@font-face {
+  font-family: "Prototype";
+  src: url("../fonts/Prototype.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Prototype.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Prototype.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/Prototype.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/Prototype.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/Prototype.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Prototype.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "mixins";
 @import "variables";
 
@@ -18,7 +31,11 @@ http://github.com/redpik/Twoobl
 ::selection { background: $gray-lighter; color: $gray-dark; }
 ::-moz-selection { background: $gray-lighter; color: $gray-dark; }
 
-
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headings-font-family;
+	text-align: center;
+	font-weight: 100;
+}
 
 .title {
 	display: block;

@@ -1,0 +1,144 @@
+/*!
+   _____                _
+  |_   _|__ _ __ __ __ | |
+    | | V  V / .\ .\ .)| |
+    |_|\_/\_/\__/__/__)|_|
+http://github.com/redpik/Twoobl
+*/
+
+@import "mixins";
+@import "variables";
+
+// Here is Bootstrap for Sass. https://github.com/twbs/bootstrap-sass
+@import "bootstrap";
+
+
+
+// text selection
+::selection { background: $gray-lighter; color: $gray-dark; }
+::-moz-selection { background: $gray-lighter; color: $gray-dark; }
+
+
+
+.title {
+	display: block;
+	text-transform: uppercase;
+	margin: 0;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	color: $headings-color;
+	//@include hyphens();
+
+	// anti aliasing problem with Chrome & Windows? http://css-tricks.com/adding-stroke-to-web-text/
+	// -webkit-text-stroke: 0.25px;
+
+	a {
+		display: block;
+		color: inherit;
+	}
+}
+
+
+
+#wrap { padding-top: 2em; }
+
+
+
+// Header
+@import "header";
+
+
+
+// Content
+@import "content";
+
+
+
+// Home page
+@import "home";
+
+
+
+// Comments & comment form
+@import "comments";
+
+
+
+// Sidebar
+@import "sidebar";
+
+
+
+// Footer
+@import "footer";
+
+
+
+// Plugins styles & overrides
+@import "plugins";
+
+
+
+// Media Queries BS3 & print
+@import "mediaqueries";
+
+
+
+// Internet Explorer
+@import "ie";
+
+
+nav {
+	background-color: white !important;
+	li {
+		color: $link-orange;
+		a:before {
+			background-color: $text-color !important;
+		}
+	}
+	}
+
+	.slick-prev:before, .slick-next:before {
+		color: grey !important;
+	}
+
+	.slideraccueil {
+		div {
+			text-align: -webkit-center;
+			outline: none !important;
+		}
+	}
+
+
+header {
+	.social-i {
+		position: absolute;
+		left: 58%;
+		width: 3%;
+	}
+	.social-f {
+		position: absolute;
+		left: 63%;
+		width: 3%;
+	}
+	.social-t {
+		position: absolute;
+		left: 68%;
+		width: 3%;
+	}
+	.img-header{
+		margin: auto;
+	}
+}
+
+footer {
+	background-image: url("http://randofestival-mende.fr/wp-content/themes/theme_festival/assets/img/footer-cdb.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 400px;
+
+		.logo-midi {
+			max-width: 14%;
+		}
+}

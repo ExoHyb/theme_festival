@@ -1,0 +1,16 @@
+*.DS_Store
+*._*
+
+# Windows
+*Thumbs.db
+
+# Linux
+*.thumbnails
+
+.project
+.settings
+.idea
+
+.sass-cache
+node_modules
+*.css.map

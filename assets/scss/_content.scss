@@ -1,0 +1,189 @@
+
+// images
+img,
+.wp-caption { max-width: 100%; height: auto; }
+
+
+
+// Facebook placeholder
+#fb-root { display: none; }
+
+
+
+.entry-header {
+	padding-bottom: 1em;
+}
+
+
+
+.category-description {
+	padding-bottom: 1em;
+}
+
+
+
+.meta {
+	color: $gray;
+	font-size: 0.85em;
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $gray-dark;
+	}
+}
+
+
+
+[data-link] {
+	cursor: pointer;
+}
+
+
+
+.thumb {
+	text-decoration: none;
+	display: block;
+	padding-bottom: .8em;
+}
+
+
+
+.post { padding-bottom: 2em; }
+
+
+
+.entry-content {
+	@include hyphens();
+	
+	> *:first-child {
+		margin-top: 0;
+	}
+	
+	.read-more { display: block; text-align: right; }
+	
+	table {
+		@extend .table;
+	}
+	
+	iframe { max-width: 100%!important; }
+
+
+	.wp-caption-text {
+		text-align: center;
+		font-size: $font-size-small;
+		padding-top: 0.2em;
+		color: $gray-light;
+		line-height: 1.2em;
+		a {
+			color: inherit;
+			text-decoration: underline;
+			&:hover { color: $gray-dark; }
+		}
+	}
+}
+
+
+
+// WordPress classes
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; margin: 0 20px 5px 0; }
+.alignright { float: right; margin: 0 0 5px 20px; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+.wp-caption {  }
+.sticky {  }
+.bypostauthor {  }
+
+
+
+
+
+// Google map : max-width bug fix
+#map_canvas img,
+.gmnoprint img,
+.gm-style img { max-width: none; }
+
+
+
+// paginated article
+.page-nav {
+	border-top: 1px solid $gray-lighter;
+	padding-top: 5px;
+	font-size: .9em;
+	color: $gray-light;
+}
+
+
+
+// tags
+.entry-tags {
+	color: $gray-light;
+	font-size: 0.9em;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	li {
+		display: inline-block;
+		padding: 0.2em;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		&:hover {
+			color: $gray-dark;
+		}
+	}
+}
+
+
+
+.gallery {
+	@extend .clearfix;
+	margin: 0 (-($grid-gutter-width / 2));
+	padding: ($grid-gutter-width / 2) 0;
+}
+.gallery-item {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	vertical-align: top;
+	padding-bottom: $grid-gutter-width / 2;
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} & {
+			$w: floor(10000/$i)/100;
+			max-width: unquote($w + '%');
+		}
+	}
+	a {
+		display: block;
+		padding: 0 ($grid-gutter-width / 2);
+	}
+}
+
+
+
+// Twoobl placeholders
+input,
+textarea {
+	@include tw_placeholder();
+}
+
+
+
+// emojis style
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	border: none;
+	box-shadow: none;
+	height: 1em;
+	width: 1em;
+	margin: 0 .07em;
+	vertical-align: -0.1em;
+	background: none;
+	padding: 0;
+}

@@ -1,0 +1,70 @@
+
+// xs
+@media (max-width: $screen-xs-max) {
+	html[lang] {
+		margin-top: 0 !important;
+		#wpadminbar {
+			display: none !important;
+		}
+	}
+}
+
+
+
+// sm
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	
+}
+
+
+
+// md
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	
+}
+
+
+
+// lg
+@media (min-width: $screen-lg-min) {
+	
+}
+
+
+
+// print
+@media print {
+
+	#header-logo {
+		text-align: center;
+		a {
+			img {
+				display: block;
+				max-width: 50px;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	#site-desc {
+		font-size: 1em;
+	}
+
+	#search-top {
+		@extend .hidden-print;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+
+	#main {
+		float: none;
+		width: auto;
+		
+		a {
+			text-decoration: underline;
+		}
+	}
+
+}

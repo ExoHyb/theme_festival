@@ -6046,6 +6046,17 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     padding-left: 0.4em; }
 
+@keyframes pendouille {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-5deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.social-f:hover, .social-i:hover, .social-t:hover {
+  animation: pendouille 2s infinite; }
+
 #header-logo a {
   display: block; }
 

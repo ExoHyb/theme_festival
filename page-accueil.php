@@ -18,12 +18,12 @@ Template Name: Accueil
 				echo '</h2>';
 			?>
 
-			<div class="slideraccueil">
+			<div class=" row slideraccueil">
 					<?php
 					$slideraccueils = get_field('slider_intervenants');
 						if( $slideraccueils ):
 							foreach( $slideraccueils as $slideraccueil ):
-								echo '<div>';
+								echo '<div class="col-sm-4">';
 									echo '<img class="img-responsive images_slider" src="' . $slideraccueil['sizes']['medium'] . '" alt="' . $slideraccueil['alt'] . '" />';
 								echo '</div>';
 							endforeach;
@@ -39,17 +39,16 @@ Template Name: Accueil
 				echo '</h2>';
 			?>
 
-			<div class="row">
+			<div class="grid">
+				<div class="grid-sizer"></div>
 				<?php
 				$imagerandos = get_field('gallerie_randonnees');
 					if( $imagerandos ):
-						echo '<ul>';
 							foreach( $imagerandos as $imagerando ):
-									echo '<div class="col-sm-4">';
-										echo '<img class="img-responsive" src="' . $imagerando[url] . '" alt="' . $imagerando['alt'] . '" />';
+									echo '<div class="grid-item">';
+										echo '<a href="' . $imagerando[url] . '"><img class="img-responsive" src="' . $imagerando['sizes']['large'] . '" alt="' . $imagerando['alt'] . '" /></a>';
 									echo '</div>';
 							endforeach;
-						echo '</ul>';
 					endif;
 				?>
 			</div>

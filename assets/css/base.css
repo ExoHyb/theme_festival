@@ -6123,6 +6123,24 @@ h1, h2, h3, h4, h5, h6 {
       #nav-main > div > ul > li:hover > ul {
         display: block; }
 
+header .social-i {
+  position: absolute;
+  left: 58%;
+  width: 3%; }
+
+header .social-f {
+  position: absolute;
+  left: 63%;
+  width: 3%; }
+
+header .social-t {
+  position: absolute;
+  left: 68%;
+  width: 3%; }
+
+header .img-header {
+  margin: auto; }
+
 img,
 .wp-caption {
   max-width: 100%;
@@ -6293,11 +6311,19 @@ img.emoji {
   background: none;
   padding: 0; }
 
-.images_slider {
+.video {
+  width: 50%;
   margin: auto; }
+
+.images_slider {
+  margin: auto;
+  max-height: 180px; }
 
 .slick-arrow {
   height: 50px; }
+
+#bloc_instagram {
+  height: 500px; }
 
 #comments {
   padding-top: 2em; }
@@ -6357,6 +6383,11 @@ img.emoji {
   #sidebar .fb_iframe_widget span,
   #sidebar .fb_iframe_widget span iframe[style] {
     width: 100% !important; }
+
+footer {
+  color: #fff; }
+  footer .logo-midi {
+    max-width: 14%; }
 
 #_atssh,
 body > img[src*="addthis"] {
@@ -6787,6 +6818,33 @@ body > img[src*="addthis"] {
     #main a {
       text-decoration: underline; } }
 
+body {
+  background-image: url("http://randofestival-mende.fr/wp-content/themes/theme_festival/assets/img/footer-cdb.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom; }
+
+.grid {
+  background: #fff; }
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 33.333%; }
+
+.grid-item {
+  float: left; }
+
+.grid-item img {
+  display: block;
+  max-width: 100%; }
+
 nav {
   background-color: white !important; }
   nav li {
@@ -6800,32 +6858,5 @@ nav {
 .slideraccueil div {
   text-align: -webkit-center;
   outline: none !important; }
-
-header .social-i {
-  position: absolute;
-  left: 58%;
-  width: 3%; }
-
-header .social-f {
-  position: absolute;
-  left: 63%;
-  width: 3%; }
-
-header .social-t {
-  position: absolute;
-  left: 68%;
-  width: 3%; }
-
-header .img-header {
-  margin: auto; }
-
-footer {
-  background-image: url("http://randofestival-mende.fr/wp-content/themes/theme_festival/assets/img/footer-cdb.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 400px; }
-  footer .logo-midi {
-    max-width: 14%; }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,9 +1,18 @@
-.images_slider {
+.video {
+  width: 50%;
   margin: auto;
 }
 
+.images_slider {
+  margin: auto;
+  max-height: 180px;
+}
 
 // Slider .... !
 .slick-arrow {
   height: 50px;
+}
+
+#bloc_instagram {
+  height: 500px;
 }

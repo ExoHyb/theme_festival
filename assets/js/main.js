@@ -4,37 +4,43 @@
 
 		$('body').addClass('js');
 
+		// Slick for Slider
+		$('.slideraccueil').slick({
+	    prevArrow:"<img class='a-left control-c prev slick-prev' src='wp-content/themes/theme_festival/assets/img/arrow-left.svg'>",
+	    nextArrow:"<img class='a-right control-c next slick-next' src='wp-content/themes/theme_festival/assets/img/arrow-right.svg'>",
+			autoplay: true,
+		  dots: false,
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  responsive: [
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+		});
 
-$('.slideraccueil').slick({
-    prevArrow:"<img class='a-left control-c prev slick-prev' src='wp-content/themes/theme_festival/assets/img/arrow-left.svg'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='wp-content/themes/theme_festival/assets/img/arrow-right.svg'>",
-
-  dots: false,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-
+		// Masonry for galerie ...
+		// init Masonry
+		var $grid = $('.grid').masonry({
+		  // options...
+		});
+		// layout Masonry after each image loads
+		$grid.imagesLoaded().progress( function() {
+		  $grid.masonry('layout');
+		});
 
 		/********************************************
 		 * 		Bootstrap

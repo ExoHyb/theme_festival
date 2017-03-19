@@ -1,4 +1,10 @@
-
 #colophon {
 	@extend .hidden-print;
+}
+
+footer {
+	color: #fff;
+	.logo-midi {
+		max-width: 14%;
+	}
 }

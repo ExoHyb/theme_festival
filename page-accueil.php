@@ -9,26 +9,32 @@ Template Name: Accueil
 <div id="main" role="main">
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="entry-content clearfix">
-			<?php the_content(); ?>
+			<div id="contenu_principal">
+					<?php the_content(); ?>
+			</div>
 
 			<!-- slider intervenants -->
-			<?php
-				echo '<h2>';
-					the_field('titre_intervenants');
-				echo '</h2>';
-			?>
+			<div id="slide-inter">
+				<?php
+					echo '<h2>';
+						the_field('titre_intervenants');
+					echo '</h2>';
+				?>
 
-			<div class=" row slideraccueil">
-					<?php
-					$slideraccueils = get_field('slider_intervenants');
-						if( $slideraccueils ):
-							foreach( $slideraccueils as $slideraccueil ):
-								echo '<div class="col-sm-4">';
-									echo '<img class="img-responsive images_slider" src="' . $slideraccueil['sizes']['medium'] . '" alt="' . $slideraccueil['alt'] . '" />';
-								echo '</div>';
-							endforeach;
-						endif;
-					?>
+				<div class=" row slideraccueil">
+						<?php
+						$slideraccueils = get_field('slider_intervenants');
+
+							if( $slideraccueils ):
+								foreach( $slideraccueils as $slideraccueil ):
+									echo '<div class="">';
+										echo '<a href="' . $slideraccueil[lien] . '"><img class="img-responsive images_slider" src="' . $slideraccueil['photo']['sizes']['thumbnail'] . '" alt="' . $slideraccueil['alt'] . '" />';
+										echo '<h3 class="nom_intervenant">' . $slideraccueil[nom_de_lintervenant] . '</h3></a>';
+									echo '</div>';
+								endforeach;
+							endif;
+						?>
+				</div>
 			</div>
 			<!-- /slider intervenants -->
 

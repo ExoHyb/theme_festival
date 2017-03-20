@@ -39,20 +39,19 @@ Template Name: Accueil
 			<!-- /slider intervenants -->
 
 			<!-- galerie randonnées -->
-			<?php
-				echo '<h2>';
-					the_field('titre_randonnees');
-				echo '</h2>';
-			?>
+			<div id="galerie">
+				<?php
+					echo '<h2>';
+						the_field('titre_randonnees');
+					echo '</h2>';
+				?>
 
-			<div class="grid">
-				<div class="grid-sizer"></div>
 				<?php
 				$imagerandos = get_field('gallerie_randonnees');
 					if( $imagerandos ):
 							foreach( $imagerandos as $imagerando ):
-									echo '<div class="grid-item">';
-										echo '<a href="' . $imagerando[url] . '"><img class="img-responsive" src="' . $imagerando['sizes']['large'] . '" alt="' . $imagerando['alt'] . '" /></a>';
+									echo '<div class="div_image_galerie">';
+										echo '<a href="' . $imagerando[url] . '"><img class="img-responsive image_galerie" src="' . $imagerando['sizes']['large'] . '" alt="' . $imagerando['alt'] . '" /></a>';
 									echo '</div>';
 							endforeach;
 					endif;
@@ -60,6 +59,8 @@ Template Name: Accueil
 			</div>
 			<!-- /galerie randonnées -->
 
+			<div class="clearfix"></div>
+			
 			<!-- button inscription -->
 			<div id="bloc_inscription">
 				<?php

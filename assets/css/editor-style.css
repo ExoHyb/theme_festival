@@ -2671,6 +2671,10 @@ img.emoji {
   background: none;
   padding: 0; }
 
+#list_intervenants .image_intervenant {
+  height: 200px;
+  overflow: hidden; }
+
 body {
   margin: 1em 1.4em; }
   body a {

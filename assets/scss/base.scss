@@ -25,7 +25,9 @@ http://github.com/redpik/Twoobl
 // Here is Bootstrap for Sass. https://github.com/twbs/bootstrap-sass
 @import "bootstrap";
 
-
+html {
+  min-height: 100%;
+}
 
 // text selection
 ::selection { background: $gray-lighter; color: $gray-dark; }

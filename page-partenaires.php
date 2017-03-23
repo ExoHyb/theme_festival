@@ -68,6 +68,50 @@ Template Name: Partenaires
 		</ul>
 		<?php endif; ?>
 	</div>
+	<hr/>
+		<h2 class="text-center"><?php
+			the_field('titre_partenaire_3');
+			?>
+		</h2>
+
+
+		<div class="row">
+			 <?php
+
+			 $imagepartenaires2 = get_field('partenaire_galerie_3');
+
+			 if( $imagepartenaires3 ): ?>
+			 <ul>
+				 <?php foreach( $imagepartenaires3 as $imagepartenaire3 ): ?>
+					 <div class="col-sm-4">
+										<img class="img-responsive" src="<?php echo $imagepartenaire3['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire3['alt']; ?>" />
+						</div>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif; ?>
+		</div>
+		<hr/>
+			<h2 class="text-center"><?php
+				the_field('titre_partenaire_4');
+				?>
+			</h2>
+
+
+			<div class="row">
+				 <?php
+
+				 $imagepartenaires4 = get_field('partenaire_galerie_4');
+
+				 if( $imagepartenaires4 ): ?>
+				 <ul>
+					 <?php foreach( $imagepartenaires4 as $imagepartenaire4 ): ?>
+						 <div class="col-sm-4">
+											<img class="img-responsive" src="<?php echo $imagepartenaire4['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire4['alt']; ?>" />
+							</div>
+					<?php endforeach; ?>
+				</ul>
+				<?php endif; ?>
+			</div>
 </div>
 
 <?php get_footer(); ?>

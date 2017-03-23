@@ -13,6 +13,10 @@ Template Name: Salon
 			<?php the_content(); ?>
 		</div>
 	<?php endwhile; ?>
+	<div class="row">
+		<div class="col-sm-5">
+
+
 	<h1 class="text-center"><?php
 		the_field('titre_page_salon');
 		?>
@@ -25,10 +29,32 @@ Template Name: Salon
 		the_field('titre_2_salon');
 		?>
 	</h2>
-	<p class="text-center"><?php
+	<p ><?php
 		the_field('horaire_salon');
 		?>
 	</p>
+	<div><?php
+		the_field('devenir_exposant');
+		?>
+		</div>
+		</div>
+
+		<div class="col-sm-7">
+			<div class="text-center">
+			<?php
+
+			$image = get_field('carte_du_salon');
+
+			if( !empty($image) ): ?>
+
+			<img class="plan_salon" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+		<?php endif; ?>
+
+				</div>
+		</div>
+
+	</div>
 </div>
 
 <?php get_footer(); ?>

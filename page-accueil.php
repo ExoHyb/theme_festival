@@ -60,11 +60,11 @@ Template Name: Accueil
 			<!-- /galerie randonnées -->
 
 			<div class="clearfix"></div>
-			
+
 			<!-- button inscription -->
 			<div id="bloc_inscription">
 				<?php
-						echo '<a href="randofestival-mende.fr/inscription" class="green-button">';
+						echo '<a href="randofestival-mende.fr/programme/" class="green-button">';
 							the_field('lien_inscription');
 						echo '</a>';
 				?>

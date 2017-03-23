@@ -13,14 +13,14 @@ Template Name: Salon
 			<?php the_content(); ?>
 		</div>
 	<?php endwhile; ?>
-	<div class="row">
-		<div class="col-sm-5">
-
-
 	<h1 class="text-center"><?php
-		the_field('titre_page_salon');
-		?>
-	</h1>
+	the_field('titre_page_salon');
+	?>
+</h1>
+	<div class="row">
+		<div style="margin-top: 1em;" class="col-sm-5">
+
+
 	<p class="text-center"><?php
 		the_field('description_salon');
 		?>
@@ -41,6 +41,7 @@ Template Name: Salon
 
 		<div class="col-sm-7">
 			<div class="text-center">
+				<h2>Plan du salon</h2>
 			<?php
 
 			$image = get_field('carte_du_salon');

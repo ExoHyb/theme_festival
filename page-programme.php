@@ -25,6 +25,7 @@ Template Name: Programme
     <li role="presentation"><a href="#programme26" aria-controls="programme26" role="tab" data-toggle="tab">Vendredi 26 Mai</a></li>
     <li role="presentation"><a href="#programme27" aria-controls="programme27" role="tab" data-toggle="tab">Samedi 27 Mai</a></li>
     <li role="presentation"><a href="#programme28" aria-controls="programme28" role="tab" data-toggle="tab">Dimanche 28 Mai</a></li>
+		<li role="presentation"><a href="#programme+" aria-controls="programme+" role="tab" data-toggle="tab">Les + du festival</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -118,6 +119,23 @@ Template Name: Programme
 
 				}
 				?></div>
+				<div role="tabpanel" class="tab-pane" id="programme+"><?php
+						if ( !function_exists('get_field') ) return;
+						$items_programmeplus = get_field('les_+_du_festival');
+
+						foreach ($items_programmeplus as $item_programmeplus) {
+								echo '<p>';
+									echo $item_programmeplus['nom_de_lactivite_+'];
+								echo '</p>';
+								echo '<p>';
+									echo $item_programmeplus['horaire_de_lactivite_+'];
+								echo '</p>';
+								echo '<p>';
+								echo $item_programmeplus['description_de_lactivite_+'];
+								echo '</p>';
+
+						}
+						?></div>
 
   </div>
 

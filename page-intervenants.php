@@ -35,7 +35,7 @@ Template Name: Intervenants
 				}
 				?>
 	</div>
-	echo '<div class="clearfix"></div>';
+	<?php echo '<div class="clearfix"></div>'; ?>
 </div>
 
 

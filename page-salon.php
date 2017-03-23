@@ -56,6 +56,172 @@ Template Name: Salon
 		</div>
 
 	</div>
+
+	<div class="row">
+		<h2 class="text-center">Les exposants</h2>
+
+	<div class="col-sm-3">
+		<h3 class="text-center">Les Équipementiers</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Exposant:</h4>
+			</div>
+			<div class="col-md-6">
+				<h4>Stand</h4>
+			</div>
+		</div>
+		<?php
+				if ( !function_exists('get_field') ) return;
+				$items_exposants = get_field('exposant_equipementiers');
+
+				foreach ($items_exposants as $item_exposant) {
+					echo "<div class='row'>";
+
+					echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['nom_exposant_equipementier'];
+						echo '</p>';
+						echo '</div>';
+
+						echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['stand_equipementier'];
+						echo '</p>';
+						echo '</div>';
+						echo '</div>';
+
+				}
+				?>
+	</div>
+
+	<div class="col-sm-3">
+		<h3 class="text-center">Les Offices du Tourisme</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Exposant:</h4>
+			</div>
+			<div class="col-md-6">
+				<h4>Stand</h4>
+			</div>
+		</div>
+		<?php
+				if ( !function_exists('get_field') ) return;
+				$items_exposants = get_field('exposant_office');
+
+				foreach ($items_exposants as $item_exposant) {
+					echo "<div class='row'>";
+					echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['nom_exposant_office'];
+						echo '</p>';
+						echo '</div>';
+						echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['stand_office'];
+						echo '</p>';
+						echo '</div>';
+						echo '</div>';
+
+				}
+				?>
+	</div>
+
+	<div class="col-sm-3">
+		<h3 class="text-center">Les Produits Locaux</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Exposant:</h4>
+			</div>
+			<div class="col-md-6">
+				<h4>Stand</h4>
+			</div>
+		</div>
+		<?php
+				if ( !function_exists('get_field') ) return;
+				$items_exposants = get_field('exposant_produits_locaux');
+
+				foreach ($items_exposants as $item_exposant) {
+					echo "<div class='row'>";
+					echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['nom_exposant_produits_locaux'];
+						echo '</p>';
+						echo '</div>';
+						echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['stand_produits_locaux'];
+						echo '</p>';
+						echo '</div>';
+						echo '</div>';
+
+				}
+				?>
+	</div>
+
+	<div class="col-sm-3">
+		<h3 class="text-center">Les Librairies</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Exposant:</h4>
+			</div>
+			<div class="col-md-6">
+				<h4>Stand</h4>
+			</div>
+		</div>
+		<?php
+				if ( !function_exists('get_field') ) return;
+				$items_exposants = get_field('exposant_librairie');
+
+				foreach ($items_exposants as $item_exposant) {
+					echo "<div class='row'>";
+					echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['nom_exposant_librairie'];
+						echo '</p>';
+						echo '</div>';
+						echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['stand_librairie'];
+						echo '</p>';
+						echo '</div>';
+						echo '</div>';
+
+				}
+				?>
+	</div>
+
+	<div class="col-sm-3">
+		<h3 class="text-center">Les Grands Itinéraires Pédestre</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Exposant:</h4>
+			</div>
+			<div class="col-md-6">
+				<h4>Stand</h4>
+			</div>
+		</div>
+		<?php
+				if ( !function_exists('get_field') ) return;
+				$items_exposants = get_field('exposant_itineraire_pedestre');
+
+				foreach ($items_exposants as $item_exposant) {
+					echo "<div class='row'>";
+					echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['nom_exposant_itineraire_pedestre'];
+						echo '</p>';
+						echo '</div>';
+						echo "<div class='col-md-6'>";
+						echo '<p>';
+						echo $item_exposant['stand_itineraire_pedestre'];
+						echo '</p>';
+						echo '</div>';
+						echo '</div>';
+
+				}
+				?>
+	</div>
+</div>
 </div>
 
 <?php get_footer(); ?>

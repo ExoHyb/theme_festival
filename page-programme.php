@@ -17,6 +17,11 @@ Template Name: Programme
 		the_field('titre_page_programme');
 		?>
 	</h1>
+
+	<p class="text-center"><?php
+		the_field('texte_informatif_programme');
+		?>
+	</p>
 	<div>
 
   <!-- Nav tabs -->

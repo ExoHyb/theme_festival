@@ -41,7 +41,7 @@ Template Name: Partenaires
 		 <ul>
 			 <?php foreach( $imagepartenaires1 as $imagepartenaire1 ): ?>
 				 <div class="col-sm-4">
-									<img class="img-responsive" src="<?php echo $imagepartenaire1['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire1['alt']; ?>" />
+									<img class="img-responsive" src="<?php echo $imagepartenaire1['sizes']['medium']; ?>" alt="<?php echo $imagepartenaire1['alt']; ?>" />
 					</div>
 			<?php endforeach; ?>
 		</ul>
@@ -62,7 +62,7 @@ Template Name: Partenaires
 		 <ul>
 			 <?php foreach( $imagepartenaires2 as $imagepartenaire2 ): ?>
 				 <div class="col-sm-4">
-									<img class="img-responsive" src="<?php echo $imagepartenaire2['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire2['alt']; ?>" />
+									<img class="img-responsive" src="<?php echo $imagepartenaire2['sizes']['medium']; ?>" alt="<?php echo $imagepartenaire2['alt']; ?>" />
 					</div>
 			<?php endforeach; ?>
 		</ul>
@@ -78,13 +78,13 @@ Template Name: Partenaires
 		<div class="row">
 			 <?php
 
-			 $imagepartenaires2 = get_field('partenaire_galerie_3');
+			 $imagepartenaires3 = get_field('partenaire_galerie_3');
 
 			 if( $imagepartenaires3 ): ?>
 			 <ul>
 				 <?php foreach( $imagepartenaires3 as $imagepartenaire3 ): ?>
 					 <div class="col-sm-4">
-										<img class="img-responsive" src="<?php echo $imagepartenaire3['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire3['alt']; ?>" />
+										<img class="img-responsive" src="<?php echo $imagepartenaire3['sizes']['medium']; ?>" alt="<?php echo $imagepartenaire3['alt']; ?>" />
 						</div>
 				<?php endforeach; ?>
 			</ul>
@@ -106,7 +106,7 @@ Template Name: Partenaires
 				 <ul>
 					 <?php foreach( $imagepartenaires4 as $imagepartenaire4 ): ?>
 						 <div class="col-sm-4">
-											<img class="img-responsive" src="<?php echo $imagepartenaire4['sizes']['thumbnail']; ?>" alt="<?php echo $imagepartenaire4['alt']; ?>" />
+											<img class="img-responsive" src="<?php echo $imagepartenaire4['sizes']['medium']; ?>" alt="<?php echo $imagepartenaire4['alt']; ?>" />
 							</div>
 					<?php endforeach; ?>
 				</ul>

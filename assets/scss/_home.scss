@@ -1,3 +1,11 @@
+#contenu_principal {
+  h1 {
+    animation: textappear 1s 1;
+  }
+  h2 {
+    animation: textappear 2s 1;
+  }
+}
 .video {
   width: 50%;
   margin: auto;

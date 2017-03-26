@@ -31,18 +31,6 @@
 	}
 }
 
-@keyframes pendouille {
-	0% {
-		transform: rotate(0deg);
-	}
-	25% {
-		transform: rotate(-5deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
-}
-
 .social-f, .social-i, .social-t {
 	&:hover {
 		animation: pendouille 2s infinite;
@@ -90,6 +78,7 @@
 				transition-duration: 0.3s;
 				&:hover {
 					color: $brand-secondary;
+					transform: translateY(-2px);
 				}
 			}
 			&[class*="current"] > a,

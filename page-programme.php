@@ -34,116 +34,71 @@ Template Name: Programme
   </ul>
 
   <!-- Tab panes -->
+	<!-- Tab Jeudi 25 Mai -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="programme25"><?php
+    <div role="tabpanel" class="tab-pane active" id="programme25">
+			<?php
 				if ( !function_exists('get_field') ) return;
 				$items_programme_25 = get_field('programme_jeudi_25_mai');
-
 				foreach ($items_programme_25 as $item_programme25) {
-
-						echo '<p>';
-							echo $item_programme25['nom_de_lactivite_25'];
-						echo '</p>';
-						echo '<p>';
-							echo $item_programme25['horaire_de_lactivite_25'];
-						echo '</p>';
-						echo '<p>';
-						echo $item_programme25['description_de_lactivite_25'];
-						echo '</p>';
-						echo '<div class="text-center">';
-						echo "<a href='#'>Je m'inscris !";
-						echo '</a>';
-						echo '</div>';
-
+						echo '<p>' . $item_programme25['nom_de_lactivite_25'] . '</p>';
+						echo '<p>' . $item_programme25['horaire_de_lactivite_25'] . '</p>';
+						echo '<p>' . $item_programme25['description_de_lactivite_25'] . '</p>';
+						echo "<a href='#'>Je m'inscris !</a>";
 				}
-				?></div>
-
-    <div role="tabpanel" class="tab-pane" id="programme26"><?php
+				?>
+		</div>
+		<!-- Tab Vendredi 26 Mai -->
+    <div role="tabpanel" class="tab-pane" id="programme26">
+			<?php
 				if ( !function_exists('get_field') ) return;
 				$items_programme26 = get_field('programme_vendredi_26_mai');
-
 				foreach ($items_programme26 as $item_programme26) {
-
-						echo '<p>';
-							echo $item_programme26['nom_de_lactivite_26'];
-						echo '</p>';
-
-						echo '<p>';
-							echo $item_programme26['horaire_de_lactivite_26'];
-						echo '</p>';
-						echo '<p>';
-						echo $item_programme26['description_de_lactivite_26'];
-						echo '</p>';
-						echo '<div class="text-center">';
-						echo "<a href='#'>Je m'inscris !";
-						echo '</a>';
-						echo '</div>';
+						echo '<p>' . $item_programme26['nom_de_lactivite_26'] . '</p>';
+						echo '<p>' . $item_programme26['horaire_de_lactivite_26'] . '</p>';
+						echo '<p>' . $item_programme26['description_de_lactivite_26'] . '</p>';
+						echo "<a href='#'>Je m'inscris !</a>";
 				}
-				?></div>
-
-    <div role="tabpanel" class="tab-pane" id="programme27"><?php
+				?>
+		</div>
+		<!-- Tab Samedi 27 Mai -->
+    <div role="tabpanel" class="tab-pane" id="programme27">
+			<?php
 				if ( !function_exists('get_field') ) return;
 				$items_programme27 = get_field('programme_samedi_27_mai');
-
 				foreach ($items_programme27 as $item_programme27) {
-						echo '<p>';
-							echo $item_programme27['nom_de_lactivite_27'];
-						echo '</p>';
-						echo '<p>';
-							echo $item_programme27['horaire_de_lactivite_27'];
-						echo '</p>';
-						echo '<p>';
-						echo $item_programme27['description_de_lactivite_27'];
-						echo '</p>';
-						echo '<div class="text-center">';
-						echo "<a href='#'>Je m'inscris !";
-						echo '</a>';
-						echo '</div>';
-
+						echo '<p>' . $item_programme27['nom_de_lactivite_27'] . '</p>';
+						echo '<p>' . $item_programme27['horaire_de_lactivite_27'] . '</p>';
+						echo '<p>' . $item_programme27['description_de_lactivite_27'] . '</p>';
+						echo "<a href='#'>Je m'inscris !</a>";
 				}
-				?></div>
-
-    <div role="tabpanel" class="tab-pane" id="programme28"><?php
+			?>
+		</div>
+		<!-- Tab Dimanche 28 Mai -->
+    <div role="tabpanel" class="tab-pane" id="programme28">
+			<?php
 				if ( !function_exists('get_field') ) return;
 				$items_programme28 = get_field('programme_dimanche_28_mai');
-
 				foreach ($items_programme28 as $item_programme28) {
-						echo '<p>';
-							echo $item_programme28['nom_de_lactivite_28'];
-						echo '</p>';
-						echo '<p>';
-							echo $item_programme28['horaire_de_lactivite_28'];
-						echo '</p>';
-						echo '<p>';
-						echo $item_programme28['description_de_lactivite_28'];
-						echo '</p>';
-						echo '<div class="text-center">';
-						echo "<a href='#'>Je m'inscris !";
-						echo '</a>';
-						echo '</div>';
-
+						echo '<p>' . $item_programme28['nom_de_lactivite_28'] . '</p>';
+						echo '<p>' . $item_programme28['horaire_de_lactivite_28'] . '</p>';
+						echo '<p>' . $item_programme28['description_de_lactivite_28'] . '</p>';
+						echo "<a href='#'>Je m'inscris !</a>";
 				}
-				?></div>
-				<div role="tabpanel" class="tab-pane" id="programmeplus"><?php
-						if ( !function_exists('get_field') ) return;
-						$items_programmeplus = get_field('les_+_du_festival');
-
-						foreach ($items_programmeplus as $item_programmeplus) {
-								echo '<p>';
-									echo $item_programmeplus['nom_de_lactivite_+'];
-								echo '</p>';
-								echo '<p>';
-									echo $item_programmeplus['horaire_de_lactivite_+'];
-								echo '</p>';
-								echo '<p>';
-								echo $item_programmeplus['description_de_lactivite_+'];
-								echo '</p>';
-
-						}
-						?></div>
-
+			?>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="programmeplus">
+			<?php
+				if ( !function_exists('get_field') ) return;
+				$items_programmeplus = get_field('les_+_du_festival');
+				foreach ($items_programmeplus as $item_programmeplus) {
+					echo '<p>' . $item_programmeplus['nom_de_lactivite_+'] . '</p>';
+					echo '<p>' . $item_programmeplus['horaire_de_lactivite_+'] . '</p>';
+					echo '<p>' . $item_programmeplus['description_de_lactivite_+'] . '</p>';
+				}
+				?>
+			</div>
   </div>
-
 </div>
 </div>
 

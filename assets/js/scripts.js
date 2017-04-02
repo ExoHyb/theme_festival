@@ -1,3 +1,121 @@
+/*
+ * jQuery appear plugin
+ *
+ * Copyright (c) 2012 Andrey Sidorov
+ * licensed under MIT license.
+ *
+ * https://github.com/morr/jquery.appear/
+ *
+ * Version: 0.3.6
+ */
+(function($) {
+  var selectors = [];
+
+  var check_binded = false;
+  var check_lock = false;
+  var defaults = {
+    interval: 250,
+    force_process: false
+  };
+  var $window = $(window);
+
+  var $prior_appeared = [];
+
+  function appeared(selector) {
+    return $(selector).filter(function() {
+      return $(this).is(':appeared');
+    });
+  }
+
+  function process() {
+    check_lock = false;
+    for (var index = 0, selectorsLength = selectors.length; index < selectorsLength; index++) {
+      var $appeared = appeared(selectors[index]);
+
+      $appeared.trigger('appear', [$appeared]);
+
+      if ($prior_appeared[index]) {
+        var $disappeared = $prior_appeared[index].not($appeared);
+        $disappeared.trigger('disappear', [$disappeared]);
+      }
+      $prior_appeared[index] = $appeared;
+    }
+  }
+
+  function add_selector(selector) {
+    selectors.push(selector);
+    $prior_appeared.push();
+  }
+
+  // "appeared" custom filter
+  $.expr[':'].appeared = function(element) {
+    var $element = $(element);
+    if (!$element.is(':visible')) {
+      return false;
+    }
+
+    var window_left = $window.scrollLeft();
+    var window_top = $window.scrollTop();
+    var offset = $element.offset();
+    var left = offset.left;
+    var top = offset.top;
+
+    if (top + $element.height() >= window_top &&
+        top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
+        left + $element.width() >= window_left &&
+        left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  $.fn.extend({
+    // watching for element's appearance in browser viewport
+    appear: function(options) {
+      var opts = $.extend({}, defaults, options || {});
+      var selector = this.selector || this;
+      if (!check_binded) {
+        var on_check = function() {
+          if (check_lock) {
+            return;
+          }
+          check_lock = true;
+
+          setTimeout(process, opts.interval);
+        };
+
+        $(window).scroll(on_check).resize(on_check);
+        check_binded = true;
+      }
+
+      if (opts.force_process) {
+        setTimeout(process, opts.interval);
+      }
+      add_selector(selector);
+      return $(selector);
+    }
+  });
+
+  $.extend({
+    // force elements's appearance check
+    force_appear: function() {
+      if (check_binded) {
+        process();
+        return true;
+      }
+      return false;
+    }
+  });
+})(function() {
+  if (typeof module !== 'undefined') {
+    // Node
+    return require('jquery');
+  } else {
+    return jQuery;
+  }
+}());
+
 /*!
  * fancyBox - jQuery Plugin
  * version: 2.1.5 (Fri, 14 Jun 2013)
@@ -5550,43 +5668,60 @@
 
 		// Slick for Slider
 		$('.slideraccueil').slick({
-	    prevArrow:"<img class='a-left control-c prev slick-prev' src='wp-content/themes/theme_festival/assets/img/arrow-left.svg'>",
-	    nextArrow:"<img class='a-right control-c next slick-next' src='wp-content/themes/theme_festival/assets/img/arrow-right.svg'>",
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='wp-content/themes/theme_festival/assets/img/arrow-left.svg'>",
+			nextArrow:"<img class='a-right control-c next slick-next' src='wp-content/themes/theme_festival/assets/img/arrow-right.svg'>",
 			autoplay: true,
-		  dots: false,
-		  infinite: true,
-		  speed: 300,
-		  slidesToShow: 3,
-		  slidesToScroll: 1,
-		  responsive: [
-		    {
-		      breakpoint: 600,
-		      settings: {
-		        slidesToShow: 2,
-		        slidesToScroll: 2
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		  ]
+			dots: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
 		});
 
 		/********************************************
-		 * 		Bootstrap
-		 ********************************************/
+		* 		Bootstrap
+		********************************************/
 		// tooltips
 		// $('a[data-toggle="tooltip"]').tooltip();
 
-
-
 		/********************************************
-		 * 		slideout.js navigation menu
-		 ********************************************/
+		* 		appear
+		********************************************/
+		appearOrnot = $('.appearornot');
+		appearOrnot.each(function () {
+			if ($(window).width() > 992) {
+				$(this).attr('data-appear-top-offset', $(this).height() * -1).appear();
+			}
+			else
+				$(this).attr('data-appear-top-offset', $(this).height() * -0.4).appear();
+		}).appear();
+		appearOrnot
+			.on('appear', function (event, $all_appeared_elements) {
+				$(this).addClass('yesisit');
+			});
+		// appearOrnot
+		// 	.on('disappear', function(event, $all_appeared_elements){
+		// 	$(this).removeClass('yesisit');
+		// 	});
+		/********************************************
+		* 		slideout.js navigation menu
+		********************************************/
 		var slideout = new Slideout({
 			'panel': document.getElementById('playground'),
 			'menu': document.getElementById('navmob'),
@@ -5603,29 +5738,29 @@
 			slideout.close();
 		}
 		slideout
-			.on('beforeopen', function() {
-				this.panel.classList.add('panel-open');
-			})
-			.on('open', function() {
-				this.panel.addEventListener('click', close);
-			})
-			.on('beforeclose', function() {
-				this.panel.classList.remove('panel-open');
-				this.panel.removeEventListener('click', close);
-			});
+		.on('beforeopen', function() {
+			this.panel.classList.add('panel-open');
+		})
+		.on('open', function() {
+			this.panel.addEventListener('click', close);
+		})
+		.on('beforeclose', function() {
+			this.panel.classList.remove('panel-open');
+			this.panel.removeEventListener('click', close);
+		});
 
 
 
 		/********************************************
-		 * 		when items become links
-		 ********************************************/
+		* 		when items become links
+		********************************************/
 		// ex 1: <div data-link="http://www.redpik.net">...</div>
 		// ex 2: <div data-link="http://www.redpik.net" data-blank="1">...</div>
 		$('[data-link]').on('click', function() {
 			var url = $(this).data('link');
 			var blank = $(this).data('blank');
 			if (blank)
-				window.open(url);
+			window.open(url);
 			else {
 				window.location = url;
 			}
@@ -5639,8 +5774,8 @@
 
 
 		/********************************************
-		 * 		rel attribute for galleries
-		 ********************************************/
+		* 		rel attribute for galleries
+		********************************************/
 		$('.gallery').each(function() {
 			var $_gal = $(this);
 			var idgal = $_gal.attr('id');
@@ -5650,8 +5785,8 @@
 
 
 		/********************************************
-		 * 		Popin images with fancybox
-		 ********************************************/
+		* 		Popin images with fancybox
+		********************************************/
 		$('.fancybox, a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"]').fancybox({
 			padding: 6,
 			openEffect: 'elastic'
@@ -5660,8 +5795,8 @@
 
 
 		/********************************************
-		 * 		fitvids.js
-		 ********************************************/
+		* 		fitvids.js
+		********************************************/
 		$(".entry-content").fitVids();
 		$(".entry-content").fitVids({ customSelector: "iframe[src*='dailymotion.com']"});
 

@@ -1,0 +1,136 @@
+.page-template-page-intervenants {
+    #list_intervenants {
+        .col-xs-12 {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            &:nth-child(1n) {
+                &.appearornot {
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+
+                    &.yesisit {
+                        transform: translateX(0%);
+                        opacity: 0;
+                        animation: appearZone cubic-bezier(1,-0.01, 0.78, 1.49) 0.6s forwards;
+                    }
+
+                    &.yesisit.right {
+                        animation: appearZoneRight cubic-bezier(1,-0.01, 0.78, 1.49) 0.6s forwards;
+                    }
+
+                    @keyframes appearZone {
+                        0% {
+                            transform: translateX(20%);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes appearZoneLeft {
+                        0% {
+                            transform: translateX(-20%);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes appearZoneRight {
+                        0% {
+                            transform: translateX(20%);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2n) {
+                &.appearornot {
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+
+                    &.yesisit {
+                        transform: translateX(0%);
+                        opacity: 0;
+                        animation: appearZone cubic-bezier(1,-0.01, 0.78, 1.49) 0.6s forwards;
+                    }
+
+                    &.yesisit.left {
+                        animation: appearZoneLeft cubic-bezier(1,-0.01, 0.78, 1.49) 0.6s forwards;
+                    }
+
+                    @keyframes appearZone {
+                        0% {
+                            transform: translateX(20%);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes appearZoneLeft {
+                        0% {
+                            transform: translateX(-20%);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+                .col-sm-2 {
+                    float: right;
+                }
+                .col-sm-10 {
+                    h2 {
+                        float: right;
+                    }
+                    p {
+                        clear: right;
+                        float: right;
+                    }
+                }
+            }
+        }
+        .englob_intervenants {
+            margin-top: $grid-gutter-width;
+            background: url('../img/topography.png');
+            box-shadow: 1px 1px 10px 5px rgba(122, 122, 122, 0.1);
+            padding: 1em;
+            .img_inter_plus {
+                display: block;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    bottom: 5px;
+                    right: 20px;
+                    left: 20px;
+                    border: 2px solid #fff;
+                }
+            }
+            .caption {
+                h2 {
+                    text-align: inherit;
+                    margin: 0;
+                    font-family: 'Macondo', cursive;
+                }
+                p {
+                    font-size: 14px;
+                    color: $gray-dark;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

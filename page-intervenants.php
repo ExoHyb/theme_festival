@@ -23,13 +23,21 @@ Template Name: Intervenants
 				$items_les_intervenants = get_field('les_intervenants');
 
 				foreach ($items_les_intervenants as $item_inter) {
-					echo '<div class="col-xs-12 col-sm-4">';
-						echo '<div class="image_intervenant">';
-							echo '<img src="' . $item_inter['photo_intervenant'][url] . '"/>';
-						echo '</div>';
-						echo '<div class="caption">';
-								echo '<h2>' . $item_inter['nom_intervenant'] . '</h2>';
-								echo '<p>' . $item_inter['description_intervenant'] . '</p>';
+					echo '<div class="col-xs-12 appearornot">';
+						echo '<div class="englob_intervenants">';
+							echo '<div class="row">';
+								echo '<div class="col-sm-2">';
+									echo '<div class="img_inter_plus">';
+										echo '<img src="' . $item_inter['photo_intervenant']['sizes']['thumbnail'] . '"/>';
+									echo '</div>';
+								echo '</div>';
+								echo '<div class="col-sm-10">';
+									echo '<div class="caption">';
+											echo '<h2>' . $item_inter['nom_intervenant'] . '</h2>';
+											echo '<p>' . $item_inter['description_intervenant'] . '</p>';
+									echo '</div>';
+								echo '</div>';
+							echo '</div>';
 						echo '</div>';
 					echo '</div>';
 				}

@@ -6049,6 +6049,9 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 100; }
 
+#wrap {
+  min-height: 1000px; }
+
 .title {
   display: block;
   text-transform: uppercase;
@@ -6415,22 +6418,45 @@ img.emoji {
   width: 200px;
   background: #5dc269;
   margin: 1.5em auto; }
-  #bloc_inscription .green-button {
-    display: block;
-    padding: 1em 0;
-    text-align: center;
-    font-family: "Prototype", "Lato", sans-serif;
-    margin: auto;
-    color: #fff !important; }
-    #bloc_inscription .green-button:hover {
-      text-decoration: none; }
 
-#bloc_instagram {
-  height: 500px; }
+.green-button {
+  display: block;
+  padding: 1em 0;
+  text-align: center;
+  font-family: "Prototype", "Lato", sans-serif;
+  margin: auto;
+  color: #fff !important;
+  background: #5dc269; }
+  .green-button:hover {
+    text-decoration: none; }
 
-.tab-content {
-  border: 1px solid #CCC;
-  border-top: none; }
+.page-template-page-programme .col-sm-4:nth-child(3n+1) {
+  clear: left; }
+
+#menu_tab_programme {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  margin-bottom: 15px; }
+  #menu_tab_programme a {
+    font-weight: 700; }
+  #menu_tab_programme li {
+    border: none; }
+    #menu_tab_programme li:hover a {
+      border: none; }
+  #menu_tab_programme li.active a {
+    color: #5dc269;
+    border: none; }
+
+.bloc_uni_prog {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 1em;
+  box-shadow: 1px 1px 10px 5px rgba(122, 122, 122, 0.1);
+  background: url("../img/topography.png"); }
+  .bloc_uni_prog .green-button {
+    width: 60%;
+    margin: auto; }
 
 #comments {
   padding-top: 2em; }
@@ -6493,8 +6519,13 @@ img.emoji {
 
 footer {
   color: #fff; }
+  footer #space_footer {
+    display: block;
+    height: 350px; }
   footer .logo-midi {
     max-width: 14%; }
+  footer p {
+    color: #F0F0F0 !important; }
 
 #_atssh,
 body > img[src*="addthis"] {

@@ -3,15 +3,14 @@
 
 	<footer id="colophon" role="contentinfo">
 		<div class="container text-center">
+			<div id="space_footer"></div>
 			<div class="row">
 				<div class="col-sm-offset-3 col-sm-6">
 					<p>
 						En Partenariat avec Midi Libre
 					</p>
+					<a href="#"><img class="logo-midi" src="<?php bloginfo('template_url'); ?>/assets/img/midilibre.jpeg" alt="" /></a>
 				</div>
-					<div class="col-sm-3">
-						<a href="#"><img class="logo-midi" src="<?php bloginfo('template_url'); ?>/assets/img/midilibre.jpeg" alt="" /></a>
-					</div>
 
 				<div class="col-sm-offset-4 col-sm-2">
 					<a href="#">Mentions Légales</a>

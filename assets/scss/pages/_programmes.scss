@@ -1,4 +1,43 @@
-.tab-content {
-  border: 1px solid $gray-light;
-  border-top: none;
+.page-template-page-programme {
+    .col-sm-4 {
+        &:nth-child(3n+1) {
+            clear: left;
+        }
+    }
+}
+
+#menu_tab_programme {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    margin-bottom: 15px;
+    a {
+        font-weight: $bold;
+    }
+    li {
+        border: none;
+        &:hover {
+            a {
+                border: none;
+            }
+        }
+    }
+    li.active a {
+        color: #5dc269;
+        border: none;
+    }
+}
+
+.bloc_uni_prog {
+    text-align: center;
+    margin-bottom: $grid-gutter-width;
+    padding: 1em;
+    box-shadow: 1px 1px 10px 5px rgba(122, 122, 122, 0.1);
+    background: url('../img/topography.png');
+    .green-button {
+        width: 60%;
+        margin: auto;
+        &:hover {
+        }
+    }
 }

@@ -4,7 +4,14 @@
 
 footer {
 	color: #fff;
+	#space_footer {
+		display: block;
+		height: 350px;
+	}
 	.logo-midi {
 		max-width: 14%;
+	}
+	p {
+		color: $gray-lighter!important;
 	}
 }

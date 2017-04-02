@@ -1,7 +1,7 @@
 <?php
 
 /* constants */
-define('_MAIN_CLASS_', 'col-sm-9 col-sm-push-3');
+define('_MAIN_CLASS_', 'col-sm-12');
 define('_SIDEBAR_CLASS_', 'col-sm-3 col-sm-pull-9 hidden-xs');
 define('_THEME_COLOR_', '#444');
 define('_MOBILE_NAV_', true);

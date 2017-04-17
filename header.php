@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
 	<?php wp_head(); ?>
 	<!-- IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -37,7 +37,7 @@
 		<div class="text-center container">
 
 				<a href="https://www.instagram.com/mendetourisme/" target="_blank"><img class="img-responsive social-i" src="<?php bloginfo('template_url'); ?>/assets/img/1488247219_instagram.png" alt="Lien Instagram" /></a>
-				<a href="https://www.facebook.com/pages/Office-De-Tourisme-De-Mende/260407530801258?fref=ts" target="_blank"><img class="img-responsive social-f" src="<?php bloginfo('template_url'); ?>/assets/img/1488247121_facebook.png" alt="Lien Facebook" /></a>
+				<a href="https://www.facebook.com/Mendetourisme/" target="_blank"><img class="img-responsive social-f" src="<?php bloginfo('template_url'); ?>/assets/img/1488247121_facebook.png" alt="Lien Facebook" /></a>
 				<a href="https://twitter.com/Mendetourisme?lang=fr" target="_blank"><img class="img-responsive social-t" src="<?php bloginfo('template_url'); ?>/assets/img/1488247066_twitter.png" alt="Lien Twitter" /></a>
 			<a href="http://www.randofestival-mende.fr"><img class="img-responsive img-header" src="<?php bloginfo('template_url'); ?>/assets/img/headerimg.png" alt="Bannière Camp de Base" /></a>
 

@@ -5,6 +5,10 @@
     h2 {
         animation: textappear 2s 1;
     }
+    .col-sm-8 {
+        text-align: justify;
+        font-size: 18px;
+    }
 }
 .video {
     width: 50%;
@@ -95,12 +99,24 @@
     margin: auto;
     color: #fff!important;
     background: #5dc269;
+    transition-duration: 0.3s;
     &:hover {
         text-decoration: none;
+        // box-shadow: 1px 1px 10px 5px rgba(#000, 0.3);
+        background: darken(#5dc269, 10%);
     }
 }
 
 // Bloc instagram ...
 #bloc_instagram {
-    // height: 500px;
+    .sb_instagram_header {
+        width: 50%;
+        margin: auto;
+        float: none;
+        padding: 1em 0;
+        display: block;
+    }
+    .sbi_photo {
+        background-size: 100!important;
+    }
 }

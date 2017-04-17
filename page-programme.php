@@ -115,11 +115,17 @@ Template Name: Programme
 			<?php
 				if ( !function_exists('get_field') ) return;
 				$items_programmeplus = get_field('les_+_du_festival');
+				echo '<div class="row">';
 				foreach ($items_programmeplus as $item_programmeplus) {
-					echo '<p>' . $item_programmeplus['nom_de_lactivite_+'] . '</p>';
-					echo '<p>' . $item_programmeplus['horaire_de_lactivite_+'] . '</p>';
-					echo '<p>' . $item_programmeplus['description_de_lactivite_+'] . '</p>';
+					echo '<div class="col-sm-4">';
+						echo '<div class="bloc_uni_prog">';
+							echo '<h2>' . $item_programmeplus['nom_de_lactivite_+'] . '</h2>';
+							echo '<p class="description_programme">' . $item_programmeplus['horaire_de_lactivite_+'] . '</p>';
+							echo '<p class="horaire_programme">' . $item_programmeplus['description_de_lactivite_+'] . '</p>';
+						echo '</div>';
+					echo '</div>';
 				}
+				echo '</div>';
 				?>
 			</div>
   </div>

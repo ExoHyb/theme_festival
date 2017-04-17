@@ -77,6 +77,10 @@ Template Name: Accueil
 						echo '<h2>';
 						the_field('titre_instagram');
 						echo '</h2>';
+						echo '<div class="ech-insta">';
+							$insta = the_field('shortcode_instagram');
+						echo '</div>';
+						// 	echo apply_filters('the_content', $insta);
 				?>
 			</div>
 			<!-- /bloc instagram -->

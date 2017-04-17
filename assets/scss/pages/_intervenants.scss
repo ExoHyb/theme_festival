@@ -88,16 +88,18 @@
                         }
                     }
                 }
-                .col-sm-2 {
-                    float: right;
-                }
-                .col-sm-10 {
-                    h2 {
+                @media (min-width: 1000px) {
+                    .col-sm-2 {
                         float: right;
                     }
-                    p {
-                        clear: right;
-                        float: right;
+                    .col-sm-10 {
+                        h2 {
+                            float: right;
+                        }
+                        p {
+                            clear: right;
+                            float: right;
+                        }
                     }
                 }
             }

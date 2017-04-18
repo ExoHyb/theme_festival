@@ -12,11 +12,8 @@
 					<a href="#"><img class="logo-midi" src="<?php bloginfo('template_url'); ?>/assets/img/midilibre.jpeg" alt="" /></a>
 				</div>
 
-				<div class="col-sm-offset-4 col-sm-2">
-					<a href="#">Mentions Légales</a>
-				</div>
-				<div class="col-sm-2">
-					<a href="#">Conditions Générales</a>
+				<div class="col-sm-offset-5 col-sm-2">
+					<a href="http://randofestival-mende.fr/mention-legales">Mentions Légales</a>
 				</div>
 
 				<div class="col-sm-12">

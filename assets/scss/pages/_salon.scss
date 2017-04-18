@@ -1,3 +1,22 @@
-h2, h3, h4 {
-    font-family: 'Macondo', cursive;
+.page-template-page-salon {
+    h2, h3, h4 {
+        font-family: 'Macondo', cursive;
+        font-weight: bold;
+    }
+    h4 {
+        font-weight: lighter;
+    }
+    .globdesc-salon {
+        text-align: center;
+        #dsc-sal {
+            font-style: italic;
+        }
+    }
+    .bloc-uni-salon {
+        text-align: center;
+        margin-bottom: $grid-gutter-width;
+        padding: 1em;
+        box-shadow: 1px 1px 10px 5px rgba(122, 122, 122, 0.1);
+        background: url('../img/topography.png');
+    }
 }

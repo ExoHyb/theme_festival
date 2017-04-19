@@ -61,7 +61,14 @@
 	}
 }
 
-
+@media (min-width: 767px) {
+	body {
+		background-image: url("http://randofestival-mende.fr/wp-content/themes/theme_festival/assets/img/footer-cdb.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: bottom;
+	}
+}
 
 // sm
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {

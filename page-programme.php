@@ -47,7 +47,7 @@ Template Name: Programme
 							echo '<h2>' . $item_programme25['nom_de_lactivite_25'] . '</h2>';
 							echo '<p class="description_programme">' . $item_programme25['description_de_lactivite_25'] . '</p>';
 							echo '<p class="horaire_programme">' . $item_programme25['horaire_de_lactivite_25'] . '</p>';
-							echo '<a class="green-button" href="#">Prochainement</a>';
+							echo '<a class="green-button" target="_blank" href="#">Inscription</a>';
 						echo '</div>';
 					echo '</div>';
 				}

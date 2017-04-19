@@ -23,7 +23,7 @@ Template Name: Intervenants
 				$items_les_intervenants = get_field('les_intervenants');
 
 				foreach ($items_les_intervenants as $item_inter) {
-					echo '<div class="col-xs-12 appearornot">';
+					echo '<div class="col-xs-12">';
 						echo '<div class="englob_intervenants">';
 							echo '<div class="row">';
 								echo '<div class="col-sm-2">';

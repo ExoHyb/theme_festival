@@ -5703,22 +5703,20 @@
 		/********************************************
 		* 		appear
 		********************************************/
-		appearOrnot = $('.appearornot');
-		appearOrnot.each(function () {
-			if ($(window).width() > 992) {
-				$(this).attr('data-appear-top-offset', $(this).height() * -1).appear();
-			}
-			else
-				$(this).attr('data-appear-top-offset', $(this).height() * -0.4).appear();
-		}).appear();
-		appearOrnot
-			.on('appear', function (event, $all_appeared_elements) {
-				$(this).addClass('yesisit');
-			});
+
+		// appearOrnot = $('.appearornot');
+		// appearOrnot.each(function () {
+		// 	if ($(window).width() > 992) {
+		// 		$(this).attr('data-appear-top-offset', $(this).height() * 4).appear();
+		// 	}
+		// 	else
+		// 		$(this).attr('data-appear-top-offset', $(this).height() * -0.4).appear();
+		// }).appear();
 		// appearOrnot
-		// 	.on('disappear', function(event, $all_appeared_elements){
-		// 	$(this).removeClass('yesisit');
+		// 	.on('appear', function (event, $all_appeared_elements) {
+		// 		$(this).addClass('yesisit');
 		// 	});
+
 		/********************************************
 		* 		slideout.js navigation menu
 		********************************************/

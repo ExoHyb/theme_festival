@@ -47,7 +47,7 @@ Template Name: Programme
 							echo '<h2>' . $item_programme25['nom_de_lactivite_25'] . '</h2>';
 							echo '<p class="description_programme">' . $item_programme25['description_de_lactivite_25'] . '</p>';
 							echo '<p class="horaire_programme">' . $item_programme25['horaire_de_lactivite_25'] . '</p>';
-							echo '<a class="green-button" target="_blank" href="#">Inscription</a>';
+							echo '<a class="green-button" target="_blank" href="http://randofestival-mende.fr/wp-content/uploads/2017/03/Bulletin-dinscription.pdf">Je m\'inscris !</a>';
 						echo '</div>';
 					echo '</div>';
 				}
@@ -66,7 +66,7 @@ Template Name: Programme
 							echo '<h2>' . $item_programme26['nom_de_lactivite_26'] . '</h2>';
 							echo '<p class="description_programme">' . $item_programme26['description_de_lactivite_26'] . '</p>';
 							echo '<p class="horaire_programme">' . $item_programme26['horaire_de_lactivite_26'] . '</p>';
-							echo '<a class="green-button" href="#">Je m\'inscris !</a>';
+							echo '<a class="green-button" target="_blank" href="http://randofestival-mende.fr/wp-content/uploads/2017/03/Bulletin-dinscription.pdf">Je m\'inscris !</a>';
 						echo '</div>';
 					echo '</div>';
 				}
@@ -85,7 +85,7 @@ Template Name: Programme
 							echo '<h2>' . $item_programme27['nom_de_lactivite_27'] . '</h2>';
 							echo '<p class="description_programme">' . $item_programme27['description_de_lactivite_27'] . '</p>';
 							echo '<p class="horaire_programme">' . $item_programme27['horaire_de_lactivite_27'] . '</p>';
-							echo '<a class="green-button" href="#">Je m\'inscris !</a>';
+							echo '<a class="green-button" target="_blank" href="http://randofestival-mende.fr/wp-content/uploads/2017/03/Bulletin-dinscription.pdf">Je m\'inscris !</a>';
 						echo '</div>';
 					echo '</div>';
 				}
@@ -104,7 +104,7 @@ Template Name: Programme
 							echo '<h2>' . $item_programme28['nom_de_lactivite_28'] . '</h2>';
 							echo '<p class="description_programme">' . $item_programme28['description_de_lactivite_28'] . '</p>';
 							echo '<p class="horaire_programme">' . $item_programme28['horaire_de_lactivite_28'] . '</p>';
-							echo '<a class="green-button" href="#">Je m\'inscris !</a>';
+							echo '<a class="green-button" target="_blank" href="http://randofestival-mende.fr/wp-content/uploads/2017/03/Bulletin-dinscription.pdf">Je m\'inscris !</a>';
 						echo '</div>';
 					echo '</div>';
 				}

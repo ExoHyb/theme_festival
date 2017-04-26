@@ -59,7 +59,7 @@ Template Name: Salon
 									echo '<p>' . $item_exposant['nom_exposant_equipementier'] . '</p>';
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['stand_equipementier'] . '</p>';
+									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_equipementier'] . '</p>';
 								echo '</div>';
 							echo '</div>';
 							break;
@@ -70,7 +70,7 @@ Template Name: Salon
 			<!-- Les offices du tourisme -->
 				<div class="col-sm-4">
 					<div class="bloc-uni-salon">
-					<h3>Les Offices du Tourisme</h3>
+					<h3>Les Exposants Institutionnels</h3>
 					<div class="row">
 						<div class="col-xs-6">
 							<h4>Exposant:</h4>
@@ -89,7 +89,7 @@ Template Name: Salon
 									echo '<p>' . $item_exposant['nom_exposant_office'] . '</p>';
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['stand_office'] . '</p>';
+									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_office'] . '</p>';
 								echo '</div>';
 							echo '</div>';
 							break;
@@ -119,7 +119,7 @@ Template Name: Salon
 									echo '<p>' . $item_exposant['nom_exposant_produits_locaux'] . '</p>';
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['stand_produits_locaux'] . '</p>';
+									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_produits_locaux'] . '</p>';
 								echo '</div>';
 							echo '</div>';
 							break;
@@ -149,7 +149,7 @@ Template Name: Salon
 									echo '<p>' . $item_exposant['nom_exposant_librairie'] . '</p>';
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['stand_librairie'] . '</p>';
+									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_librairie'] . '</p>';
 								echo '</div>';
 							echo '</div>';
 							break;
@@ -179,7 +179,7 @@ Template Name: Salon
 									echo '<p>' . $item_exposant['nom_exposant_itineraire_pedestre'] . '</p>';
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['stand_itineraire_pedestre'] . '</p>';
+									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_itineraire_pedestre'] . '</p>';
 								echo '</div>';
 							echo '</div>';
 							break;

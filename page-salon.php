@@ -56,15 +56,20 @@ Template Name: Salon
 						foreach ($items_exposants as $item_exposant) {
 							echo '<div class="row">';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['nom_exposant_equipementier'] . '</p>';
+								if( $item_exposant['site_web_equipementier'] ):
+								echo '<a href="'. $item_exposant['site_web_equipementier'] .'">' . $item_exposant['nom_exposant_equipementier'] . '</a>';
+							else :
+								echo '<p>' . $item_exposant['nom_exposant_equipementier'] . '</p>';
+							endif ;
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_equipementier'] . '</p>';
+								echo '<p style="word-wrap: break-word">' . $item_exposant['stand_equipementier'] . '</p>';
 								echo '</div>';
 							echo '</div>';
-							break;
+
 						}
 					?>
+
 				</div>
 			</div>
 			<!-- Les offices du tourisme -->
@@ -86,15 +91,20 @@ Template Name: Salon
 						foreach ($items_exposants as $item_exposant) {
 							echo '<div class="row">';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['nom_exposant_office'] . '</p>';
+								if( $item_exposant['site_web_office'] ):
+								echo '<a href="'. $item_exposant['site_web_office'] .'">' . $item_exposant['nom_exposant_office'] . '</a>';
+							else :
+								echo '<p>' . $item_exposant['nom_exposant_office'] . '</p>';
+							endif ;
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_office'] . '</p>';
+								echo '<p style="word-wrap: break-word">' . $item_exposant['stand_office'] . '</p>';
 								echo '</div>';
 							echo '</div>';
-							break;
+
 						}
 					?>
+
 				</div>
 			</div>
 			<!-- Les produits locaux -->
@@ -109,6 +119,7 @@ Template Name: Salon
 							<h4>Stand:</h4>
 						</div>
 					</div>
+
 					<?php
 						if ( !function_exists('get_field') ) return;
 						$items_exposants = get_field('exposant_produits_locaux');
@@ -116,13 +127,17 @@ Template Name: Salon
 						foreach ($items_exposants as $item_exposant) {
 							echo '<div class="row">';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['nom_exposant_produits_locaux'] . '</p>';
+								if( $item_exposant['site_web_produits_locaux'] ):
+								echo '<a href="'. $item_exposant['site_web_produits_locaux'] .'">' . $item_exposant['nom_exposant_produits_locaux'] . '</a>';
+							else :
+								echo '<p>' . $item_exposant['nom_exposant_produits_locaux'] . '</p>';
+							endif ;
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_produits_locaux'] . '</p>';
+								echo '<p style="word-wrap: break-word">' . $item_exposant['stand_produits_locaux'] . '</p>';
 								echo '</div>';
 							echo '</div>';
-							break;
+
 						}
 					?>
 				</div>
@@ -146,13 +161,17 @@ Template Name: Salon
 						foreach ($items_exposants as $item_exposant) {
 							echo '<div class="row">';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['nom_exposant_librairie'] . '</p>';
+								if( $item_exposant['site_web_librairie'] ):
+								echo '<a href="'. $item_exposant['site_web_librairie'] .'">' . $item_exposant['nom_exposant_librairie'] . '</a>';
+							else :
+								echo '<p>' . $item_exposant['nom_exposant_librairie'] . '</p>';
+							endif ;
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_librairie'] . '</p>';
+								echo '<p style="word-wrap: break-word">' . $item_exposant['stand_librairie'] . '</p>';
 								echo '</div>';
 							echo '</div>';
-							break;
+
 						}
 					?>
 				</div>
@@ -176,13 +195,17 @@ Template Name: Salon
 						foreach ($items_exposants as $item_exposant) {
 							echo '<div class="row">';
 								echo '<div class="col-xs-6">';
-									echo '<p>' . $item_exposant['nom_exposant_itineraire_pedestre'] . '</p>';
+								if( $item_exposant['site_web_itineraire_pedestre'] ):
+								echo '<a href="'. $item_exposant['site_web_itineraire_pedestre'] .'">' . $item_exposant['nom_exposant_itineraire_pedestre'] . '</a>';
+							else :
+								echo '<p>' . $item_exposant['nom_exposant_itineraire_pedestre'] . '</p>';
+							endif ;
 								echo '</div>';
 								echo '<div class="col-xs-6">';
-									echo '<p style="word-wrap: break-word">' . $item_exposant['stand_itineraire_pedestre'] . '</p>';
+								echo '<p style="word-wrap: break-word">' . $item_exposant['stand_itineraire_pedestre'] . '</p>';
 								echo '</div>';
 							echo '</div>';
-							break;
+
 						}
 					?>
 				</div>

@@ -4,14 +4,7 @@
 	<footer id="colophon" role="contentinfo">
 		<div class="container text-center">
 			<div id="space_footer"></div>
-			<div class="row">
-				<div class="col-sm-offset-3 col-sm-6">
-					<p>
-						En Partenariat avec Midi Libre
-					</p>
-					<a href="#"><img class="logo-midi" src="<?php bloginfo('template_url'); ?>/assets/img/midilibre.jpeg" alt="" /></a>
-				</div>
-
+			<div class="row">	
 				<div class="col-sm-offset-5 col-sm-2">
 					<a href="http://randofestival-mende.fr/mention-legales">Mentions Légales</a>
 				</div>

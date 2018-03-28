@@ -61,13 +61,15 @@ Template Name: Accueil
   <div class="clearfix"></div>
 
   <!-- button inscription -->
-  <div id="bloc_inscription">
-    <?php
-        echo '<a href="randofestival-mende.fr/programme/" class="green-button">';
-          the_field('lien_inscription');
-        echo '</a>';
-    ?>
-  </div>
+	<?php if (the_field('lien_inscription')) : ?>
+	  <div id="bloc_inscription">
+	    <?php
+	        echo '<a href="randofestival-mende.fr/programme/" class="green-button">';
+	          the_field('lien_inscription');
+	        echo '</a>';
+	    ?>
+	  </div>
+	<?php endif; ?>
   <!-- /button inscription -->
 
   <!-- bloc instagram -->
